@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Tarefa</title>
+</head>
+<body>
+    <h1>Editar Tarefa</h1>
+
+    <form action="{{ url_for('hello.editar_tarefa', tarefa_id=tarefa.id) }}" method="POST">
+        <label for="descricao">Descrição da Tarefa:</label>
+        <input type="text" id="descricao" name="descricao" value="{{ tarefa.descricao }}" required>
+        <button type="submit">Atualizar Tarefa</button>
+    </form>
+
+    <a href="{{ url_for('hello.index') }}">Voltar para a lista de tarefas</a>
+</body>
+</html>
